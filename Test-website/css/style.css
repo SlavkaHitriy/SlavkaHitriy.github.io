@@ -418,6 +418,10 @@ body{
     margin-right: 0;
 }
 
+.groups__btn{
+    display: none;
+}
+
 .footer{
     margin-bottom: 168px;
 }

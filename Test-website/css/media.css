@@ -12,6 +12,7 @@
     }
 
     .groups__btn{
+        display: block;
         text-transform: uppercase;
         font-family: Arial, sans-serif;
         font-size: 14px;
