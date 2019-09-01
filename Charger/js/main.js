@@ -151,4 +151,62 @@ $(document).ready(function(){
 			scrollTop: top
 		}, 700)
 	})
+
+
+	var counter = 0;
+
+	$('.header__burger').on('click', function(){
+		if(counter === 0)
+		{
+			$('.header__menu').animate({left: '-50px'}, 500);
+			counter++;
+		}
+		else{
+			$('.header__menu').animate({left: '50px'}, 500);
+			counter = 0;
+		}
+	})
+
+	var counter2 = 0;
+
+	$('.tuning-btn').on('click', function(){
+		$('.restoration').hide();
+		$('.repairs').hide();
+		if(counter2 === 0){
+			$('.tuning').css({display: 'block'})
+			counter2++;
+		}
+		else{
+			$('.tuning').css({display: 'none'})
+			counter2 = 0;
+		}
+	})
+
+	$('.restoration-btn').on('click', function(){
+		$('.tuning').hide();
+		$('.repairs').hide();
+		if(counter2 === 0){
+			$('.restoration').css({display: 'block'})
+			counter2++;
+		}
+		else{
+			$('.restoration').css({display: 'none'})
+			counter2 = 0;
+		}
+	})
+
+	$('.repairs-btn').on('click', function(){
+		$('.tuning').hide();
+		$('.restoration').hide();
+		if(counter2 === 0){
+			$('.repairs').css({display: 'block'})
+			counter2++;
+		}
+		else{
+			$('.repairs').css({display: 'none'})
+			counter2 = 0;
+		}
+	})
+
+
 });
