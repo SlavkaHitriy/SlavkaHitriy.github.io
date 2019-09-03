@@ -155,17 +155,23 @@ $(document).ready(function(){
 
 	var counter = 0;
 
-	$('.header__burger').on('click', function(){
-		if(counter === 0)
-		{
-			$('.header__menu').animate({left: '-50px'}, 500);
-			counter++;
-		}
-		else{
-			$('.header__menu').animate({left: '50px'}, 500);
-			counter = 0;
-		}
-	})
+	// $('.header__burger').on('click', function(){
+	// 	if(counter === 0)
+	// 	{
+	// 		$('.header__menu').animate({left: '-50px'}, 500);
+	// 		counter++;
+	// 	}
+	// 	else{
+	// 		$('.header__menu').animate({left: '50px'}, 500);
+	// 		counter = 0;
+	// 	}
+	// })
+
+
+	// $('.header__burger').on('click', function(){
+	// 		$('.header__menu').addClass('header__menu-active')
+	// 		$('.header__menu').removeClass('header__menu-active')
+	// })
 
 	var counter2 = 0;
 
@@ -210,3 +216,23 @@ $(document).ready(function(){
 
 
 });
+
+// JS ====
+
+window.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('.header__menu'),
+    menuItem = document.querySelectorAll('.menu__item'),
+    hamburger = document.querySelector('.header__burger');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('header__burger-active');
+        menu.classList.toggle('header__menu-active');
+    });
+
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.toggle('header__burger-active');
+            menu.classList.toggle('header__menu-active');
+        })
+    })
+})

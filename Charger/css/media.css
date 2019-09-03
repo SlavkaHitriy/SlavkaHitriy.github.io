@@ -1,17 +1,26 @@
 @media screen and (max-width: 900px){
     .header__menu{
-        left: 50px;
+        left: 60px;
         top: 40px;
         position: absolute;
+        transition: all .3s ease;
+        background-color: rgba(0,0,0,.5);
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    .header__menu-active{
+        top: 40px;
+        left: -60px;
     }
     .header__menu ul{
         flex-direction: column;
     }
     .header__menu ul li{
         margin-bottom: 20px;
+        
     }
     .header__menu a{
-        color: #fcfcfc;
+        color: #e3a062;
         transition: 0.3s all ease;
     }
     
@@ -24,17 +33,21 @@
         position: relative;
         width: 25px;
         height: 25px;
-        background-color: #e3a062;
+        background-color: rgba(227, 160, 98, .7);
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: fixed;
+        right: 20px;
+        top: 20px;
     }
     .header__burger span{
         background-color: #000;
         height: 2px;
         width: 60%;
         position: relative;
+        transition: all .3s ease;
     }
     .header__burger span::before{
         content: '';
@@ -43,6 +56,7 @@
         width: 100%;
         position: absolute;
         bottom: 4px;
+        transition: all .3s ease;
     }
     .header__burger span::after{
         content: '';
@@ -51,6 +65,23 @@
         width: 100%;
         position: absolute;
         top: 4px;
+        transition: all .3s ease;
+    }
+    .header__burger-active span::before{
+        transform: rotate(45deg);
+        left: 6px;
+        width: 80%;
+        bottom: 3px;
+    }
+    .header__burger-active span::after{
+        transform: rotate(-45deg);
+        left: 6px;
+        width: 80%;
+        top: 3px;
+    }
+    .header__burger-active span{
+        width: 50%;
+        right: 2px;
     }
 
     #prevBtn,
