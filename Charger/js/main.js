@@ -43,13 +43,13 @@ $(document).ready(function(){
 
 
 	$('.tuning').mouseover(function(){
-		$('.tuning .hover-block').animate({opacity: 1}, {duration: 300});
+		$('.tuning .hover-block').animate({opacity: 1}, {duration: 150});
 	})
 	$('.restoration').mouseover(function(){
-		$('.restoration .hover-block').animate({opacity: 1}, {duration: 300});
+		$('.restoration .hover-block').animate({opacity: 1}, {duration: 150});
 	})
 	$('.repairs').mouseover(function(){
-		$('.repairs .hover-block').animate({opacity: 1}, {duration: 300});
+		$('.repairs .hover-block').animate({opacity: 1}, {duration: 150});
 	})
 	$('.tuning').mouseleave(function(){
 		$('.tuning .hover-block').animate({opacity: 0});
@@ -97,7 +97,7 @@ $(document).ready(function(){
 
 	$('.about-btn').on('click', function(e){
 		e.preventDefault();
-		var top = $('#about').offset().top -110;
+		var top = $('#about').offset().top;
 		$('html, body').animate({
 			scrollTop: top
 		}, 700)
@@ -105,7 +105,7 @@ $(document).ready(function(){
 
 	$('.services-btn').on('click', function(e){
 		e.preventDefault();
-		var top = $('#services').offset().top -110;
+		var top = $('#services').offset().top;
 		$('html, body').animate({
 			scrollTop: top
 		}, 700)
@@ -113,7 +113,7 @@ $(document).ready(function(){
 
 	$('.projects-btn').on('click', function(e){
 		e.preventDefault();
-		var top = $('#projects').offset().top -110;
+		var top = $('#projects').offset().top;
 		$('html, body').animate({
 			scrollTop: top
 		}, 700)
