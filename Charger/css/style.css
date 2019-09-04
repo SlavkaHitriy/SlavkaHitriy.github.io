@@ -161,11 +161,11 @@ a{
 
 
 
-.offer__btn{
+.btn-line{
 	position: absolute;
 }
 
-.offer__btn-top{
+.btn-top{
 	width: 100%;
 	height: 2px;
 	background: linear-gradient(90deg, transparent, #e3a062);
@@ -173,7 +173,7 @@ a{
 	left: -100%;	
 }
 
-.offer__btn-bottom{
+.btn-bottom{
 	width: 100%;
 	height: 2px;
 	background: linear-gradient(270deg, transparent, #e3a062);
@@ -181,7 +181,7 @@ a{
 	right: -100%;
 }
 
-.offer__btn-left{
+.btn-left{
 	width: 2px;
 	height: 100%;
 	background: linear-gradient(0deg, transparent, #e3a062);
@@ -189,7 +189,7 @@ a{
 	left: 0;
 }
 
-.offer__btn-right{
+.btn-right{
 	width: 2px;
 	height: 100%;
 	background: linear-gradient(180deg, transparent, #e3a062);
@@ -197,26 +197,61 @@ a{
 	right: 0;
 }
 
-.offer__inner-block button:hover .offer__btn-top{
-	left: 100%;
-	transition: 1s all;
-	transition-delay: 0.5s;
+
+
+.offer__inner-block button:hover .btn-top,
+.services__btn button:hover .btn-top{
+	animation: an1 1s infinite;
+	animation-delay: .5s;
+}
+@keyframes an1{
+	0%{
+		left: -100%;
+	}
+	100%{
+		left: 100%;
+	}
 }
 
-.offer__inner-block button:hover .offer__btn-bottom{
-	right: 100%;
-	transition: 1s all;
-	transition-delay: 0.5s;
+.offer__inner-block button:hover .btn-bottom,
+.services__btn button:hover .btn-bottom{
+	animation: an2 1s infinite;
+	animation-delay: .5s;
+}
+@keyframes an2{
+	0%{
+		right: -100%;
+	}
+	100%{
+		right: 100%;
+	}
 }
 
-.offer__inner-block button:hover .offer__btn-right{
+.offer__inner-block button:hover .btn-right,
+.services__btn button:hover .btn-right{
 	top: 100%;
-	transition: 1s all;
+	animation: an3 1s infinite;
+}
+@keyframes an3{
+	0%{
+		top: -100%;
+	}
+	100%{
+		top: 100%;
+	}
 }
 
-.offer__inner-block button:hover .offer__btn-left{
-	top: -100%;
-	transition: 1s all;
+.offer__inner-block button:hover .btn-left,
+.services__btn button:hover .btn-left{
+	animation: an4 1s infinite;
+}
+@keyframes an4{
+	0%{
+		top: 100%;
+	}
+	100%{
+		top: -100%;
+	}
 }
 
 .slider-wrapper{
@@ -546,18 +581,20 @@ a{
 	font-size: 14px;
 	font-family: 'Noto Sans JP', sans-serif;
 	letter-spacing: 1px;
-	color: #fcfcfc;
-	padding: 8px 0;
-	border-bottom: 1px solid #e3a062;
+	color: #e3a062;
+	padding: 9px;
+	/* border-bottom: 1px solid #e3a062; */
 	text-align: center;
 	transition: 0.3s all ease;
+	overflow: hidden;
 	cursor: pointer;
+	position: relative;
 }
 
-.services__btn button:hover{
+/* .services__btn button:hover{
 	padding: 10px 10px;
 	font-weight: 700;
-}
+} */
 
 .services__advantages{
 	display: flex;
