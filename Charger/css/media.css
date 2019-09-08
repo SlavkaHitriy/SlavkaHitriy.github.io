@@ -225,4 +225,69 @@
         transform: translateY(50%);
         width: 150px;
     }
+    .about__letter{
+        font-size: 200px;
+        color: #e3a062;
+        opacity: 0.2;
+        right: 60px;
+        z-index: 3;
+        top: 0;
+    }
+    .scroll-down::after{
+        animation: none;
+    }
+
+    .scroll-down::before{
+        animation: none;
+    }
+    .scroll-down:hover::before{
+       display: none;
+    }
+    .scroll-down:hover::after{
+        display: none;
+    }
+    .scroll-down:hover a,
+    .scroll-down:hover{
+        color: #e3a062;
+        transform: none;
+    }
+    .services__letter {
+        position: absolute;
+        font-size: 200px;
+        color: #e3a062;
+        opacity: 0.2;
+        left: 60px;
+        z-index: 4;
+        top: 0;
+    }
+    .projects__letter {
+        position: absolute;
+        font-size: 200px;
+        color: #e3a062;
+        opacity: 0.2;
+        right: 60px;
+        z-index: 4;
+        top: -150px;
+    }
+    .review__text{
+        font-size: 30px;
+    }
+    .review__text::after {
+        top: 156px;
+    }
+    .header__logo{
+        animation: none;
+    }
+    .header__menu{
+        animation: none;
+    }
+    .offer__title h1{
+        animation: none;
+    }
+    .offer__text{
+        animation: headerAn3 none;
+    }
+    .offer__inner-block button{
+        animation: headerAn4 none;
+    }
 }

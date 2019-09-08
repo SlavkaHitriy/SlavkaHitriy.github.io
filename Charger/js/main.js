@@ -70,7 +70,16 @@ $(document).ready(function(){
 		dots: false,
 		mouseDrag: true,
 		loop: true,
-		smartSpeed: 1000
+		smartSpeed: 1000,
+		responsive: {
+			0 : {
+				items: 2
+			},
+			500 : {
+				items: 3
+			}
+
+		}
 	})
 
 
