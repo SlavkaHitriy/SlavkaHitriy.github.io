@@ -71,6 +71,15 @@ a{
 	font-size: 20px;
 	text-transform: uppercase;
 	color: #fcfcfc;
+	animation: headerAn 3s;
+}
+@keyframes headerAn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
 }
 
 .header__logo-text{
@@ -80,6 +89,18 @@ a{
 }
 .header__menu{
 	width: 290px;
+	animation: headerAn1 3s;
+}
+@keyframes headerAn1{
+	0%{
+		margin-top: -200px;
+	}
+	70%{
+		margin-top: -200px;
+	}
+	100%{
+		margin-top: 0;
+	}
 }
 .header__menu ul{
 	display: flex;
@@ -132,6 +153,15 @@ a{
 	line-height: 120px;
 	font-weight: 700;
 	margin-bottom: 60px;
+	animation: headerAn2 6s;
+}
+@keyframes headerAn2{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
 }
 
 .offer__text{
@@ -140,6 +170,17 @@ a{
 	font-size: 16px;
 	color: #fcfcfc;
 	line-height: 24px;
+	animation: headerAn3 4s;
+}
+@keyframes headerAn3{
+	0%{
+		margin-left: -200px;
+		opacity: 0;
+	}
+	100%{
+		margin-left: 0;
+		opacity: 1;
+	}
 }
 
 .offer__inner-block button{
@@ -157,6 +198,17 @@ a{
 	cursor: pointer;
 	transition: 0.3s all ease;
 	overflow: hidden;
+	animation: headerAn4 2s;
+}
+@keyframes headerAn4{
+	0%{
+		margin-left: 400px;
+		opacity: 0;
+	}
+	100%{
+		margin-left: 0;
+		opacity: 1;
+	}
 }
 
 
@@ -270,13 +322,36 @@ a{
 .prev{
 	top: 50%;
 	left: 35px;
+	animation: headerAn5 3s;
+}
+@keyframes headerAn5{
+	0%{
+		left: -200px;
+	}
+	80%{
+		left: -200px;
+	}
+	100%{
+		left: 35px;
+	}
 }
 .next{
 	top: 50%;
 	right: 35px;
 	text-align: right;
+	animation: headerAn6 3s;
 }
-
+@keyframes headerAn6{
+	0%{
+		right: -200px;
+	}
+	80%{
+		right: -200px;
+	}
+	100%{
+		right: 35px;
+	}
+}
 .prev::after,
 .next::before{
 	content: '';
@@ -540,10 +615,14 @@ a{
 
 
 .services__wrapper{
-	height: 721px;
+	height: 521px;
 	background-image: url(../images/services-bg.jpg);
 	background-repeat: no-repeat;
 	position: relative;
+	/* background-attachment: fixed; */
+	background-position: center; 
+	background-size: cover;
+	margin-bottom: 200px;
 }
 
 .services__inner{
@@ -628,6 +707,10 @@ a{
 .tuning,
 .restoration{
 	margin-right: 50px;
+}
+
+.services__advantages-btn > ul{
+	display: none;
 }
 
 .services__advantages-title{

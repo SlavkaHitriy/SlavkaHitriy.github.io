@@ -115,6 +115,10 @@
         display: none;
     }
 
+    .services__advantages-btn > ul{
+        display: block;
+    }
+
     .services__advantages-btn{
         margin-top: 100px;
         position: relative;

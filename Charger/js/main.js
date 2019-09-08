@@ -214,6 +214,16 @@ $(document).ready(function(){
 		}
 	})
 
+		// $(window).scroll(function(){
+		// 	parallax();
+		// })
+
+		// function parallax(){
+		// 	var parallax = $(window).scrollTop() - 1700;
+			
+		// 	$('.services__wrapper').css('background-position-y', (parallax * 0.3) + 'px')
+		// }
+
 
 });
 
